@@ -270,7 +270,7 @@ export default function About() {
       <div className="divider mx-5 sm:mx-10 md:mx-16 lg:mx-24" />
 
       {/* ── TEAM ── */}
-      <section className="py-6 sm:py-24 px-5 sm:px-10 md:px-16 lg:px-24">
+      {/* <section className="py-6 sm:py-24 px-5 sm:px-10 md:px-16 lg:px-24">
         <AnimSection delay={0}>
           <p className="font-['Montserrat'] text-xs font-400 tracking-[0.3em] text-white/35 uppercase flex items-center">
             <span className="accent-line" />The People
@@ -309,7 +309,7 @@ export default function About() {
             </AnimSection>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <div className="divider mx-5 sm:mx-10 md:mx-16 lg:mx-24" />
 
@@ -326,7 +326,7 @@ export default function About() {
             Tell us about your project and let's build something extraordinary together.
           </p>
           <a
-            href="/contact"
+            href="/contact-us"
             className="font-['Montserrat'] text-xs font-500 tracking-[0.25em] uppercase inline-block mt-10 px-10 py-4 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300"
           >
             Start Your Project

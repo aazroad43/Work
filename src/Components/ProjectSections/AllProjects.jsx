@@ -175,10 +175,10 @@ function DetailPage({ project, onBack }) {
         .detail-img:hover { transform: scale(1.01); }
       `}</style>
 
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen ">
         {/* LEFT SIDEBAR */}
         <aside
-          className="hidden lg:flex flex-col justify-between w-56 xl:w-64 flex-shrink-0 border-r border-white/8 px-8 py-10 fixed left-0 top-[80px] h-[calc(100vh-80px)] z-10 bg-[#0e0e0d]"
+          className="hidden lg:flex  flex-col justify-between w-56 xl:w-64 flex-shrink-0 border-r border-white/8 px-8 py-10 fixed left-0 top-[80px] h-[calc(100vh-80px)] z-10 bg-[#0e0e0d]"
         >
           <div>
             <button

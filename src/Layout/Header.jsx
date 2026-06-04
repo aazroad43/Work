@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Inspect } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsInstagram } from "react-icons/bs";
+import logo from "../../public/logo.jpeg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
-  
+
   return (
     <header
       className={`top-0 left-0 w-full z-50 md:fixed ${
@@ -20,16 +21,25 @@ const Header = () => {
           : "relative md:bg-transparent bg-[#0e0e0d] "
       }`}
     >
-      {" "}
-      <div className="flex items-center max-w-7xl mx-auto justify-between px-6 py-4">
+      <div className="relative flex items-center justify-between px-5 sm:px-8 py-4">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex-shrink-0">
             <img
-              src="https://img.magnific.com/premium-vector/black-white-geometric-logo-with-white-line-middle_695270-1089.jpg"
+            src={logo}
               alt="Constrator Logo"
               className="h-16 md:h-18 w-auto object-contain"
             />
           </Link>
+        </div>
+
+        {/* Mobile Company Name */}
+        <div className="md:hidden ml-2 absolute left-1/2 -translate-x-1/2  pointer-events-none">
+          <h1
+            className="text-white text-md tracking-[0.2em] font-semibold"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
+          >
+            THUIS
+          </h1>
         </div>
 
         {/* Desktop Nav */}
@@ -53,7 +63,7 @@ const Header = () => {
         {/* Social Icons - Desktop */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="/https://www.instagram.com/thuisbuilders?utm_source=qr"
+            href="https://www.instagram.com/thuisbuilders?utm_source=qr"
             className="text-white hover:text-white/70 transition-colors"
           >
             <BsInstagram size={16} />
@@ -85,7 +95,7 @@ const Header = () => {
           </div>
         </button>
       </div>
-      {/* Mobile Menu */}
+
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -107,7 +117,6 @@ const Header = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <Link
-                    key={item}
                     to={
                       item === "HOME"
                         ? "/"
@@ -129,7 +138,7 @@ const Header = () => {
                 className="flex items-center gap-5 mt-2"
               >
                 <a
-                  href="#"
+                  href="https://www.instagram.com/thuisbuilders?utm_source=qr"
                   className="text-white hover:text-white/70 transition-colors"
                 >
                   <BsInstagram size={18} />

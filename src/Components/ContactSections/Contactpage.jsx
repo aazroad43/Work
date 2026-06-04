@@ -92,23 +92,22 @@ const Contact = () => {
             OUR LOCATION
           </h3>
           
-          <div className="bg-white/5 p-2 rounded-3xl overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0000000000005!2d76.2675!3d10.850000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859a5b5b5b5b5%3A0x1234567890abcdef!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1690000000000"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-2xl"
-            />
-          </div>
+        
+  <div>
+    <iframe
+      src="https://maps.google.com/maps?q=Chenguvetty%20Kottakkal%20Malappuram%20Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="300"
+      style={{ border: 0 }}
+      loading="lazy"
+      className="rounded-2xl"
+    />
 
-          <div className="mt-8 text-center text-white/60 text-sm">
-            <p className="font-medium text-white">Thuis Builders</p>
-            <p>Kochi / Calicut, Kerala, India</p>
-          </div>
+    <p className="mt-3 text-center text-white">
+      Chenguvetty, Kottakkal, Malappuram
+    </p>
+  </div>
+
         </div>
       </div>
     </div>
