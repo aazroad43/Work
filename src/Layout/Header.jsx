@@ -1,14 +1,26 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Inspect } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsInstagram } from "react-icons/bs";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+  
   return (
-    <header className="md:fixed bg-[#0e0e0d] md:bg-transparent top-0 left-0 w-full z-50  ">
+    <header
+      className={`top-0 left-0 w-full z-50 md:fixed ${
+        location.pathname === "/"
+          ? "fixed md:bg-transparent"
+          : "relative md:bg-transparent bg-[#0e0e0d] "
+      }`}
+    >
+      {" "}
       <div className="flex items-center max-w-7xl mx-auto justify-between px-6 py-4">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex-shrink-0">
@@ -73,7 +85,6 @@ const Header = () => {
           </div>
         </button>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
@@ -102,6 +113,7 @@ const Header = () => {
                         ? "/"
                         : `/${item.toLowerCase().replace(/\s+/g, "-")}`
                     }
+                    onClick={() => setMenuOpen(false)}
                     className="text-white text-[13px] tracking-[0.15em] font-medium hover:text-white/70 transition-colors duration-200"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
