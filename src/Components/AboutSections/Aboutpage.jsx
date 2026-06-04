@@ -144,7 +144,7 @@ export default function About() {
                   Our Projects
                 </a>
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   className="font-['Montserrat'] text-xs font-500 tracking-[0.2em] uppercase text-white/45 hover:text-white transition-colors duration-300 flex items-center gap-2"
                 >
                   Contact Us
@@ -335,4 +335,4 @@ export default function About() {
       </section>
     </div>
   );
-}
+}       
