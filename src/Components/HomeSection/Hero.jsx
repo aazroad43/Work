@@ -13,30 +13,15 @@ const slides = [
       image:
         "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80&fit=crop",
     },
+
+
     {
         id: 3,
-        title: "EXTERIOR DESIGN",
-        image:
-        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1920&q=80&fit=crop",
-    },
-    {
-        id: 4,
-        title: "LANDSCAPE DESIGN",
-        image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&q=80&fit=crop",
-    },
-    {
-        id: 5,
         title: "LUXURY SPACES",
         image:
         "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1920&q=80&fit=crop",
     },
-    {
-      id: 6,
-      title: "INTERIOR DESIGN",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1920&q=80&fit=crop",
-    },
+ 
 ];
 
 const Hero = () => {
