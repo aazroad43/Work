@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { projects, categories } from "../../Data/projects";
+import { useLocation } from "react-router-dom";
 
 // ── DETAIL PAGE ──────────────────────────────────────────
 function DetailPage({ project, onBack }) {
@@ -150,15 +151,22 @@ function DetailPage({ project, onBack }) {
 
 // ── PROJECTS LIST PAGE ───────────────────────────────────
 export default function Project() {
-  const [active, setActive] = useState("All");
-  const [selected, setSelected] = useState(null);
+      const location = useLocation();
+
+  const [active, setActive] = useState(
+    location.state?.category || "All"
+  );  const [selected, setSelected] = useState(null);
 
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   if (selected) {
     return <DetailPage project={selected} onBack={() => setSelected(null)} />;
   }
-
+  useEffect(() => {
+    if (location.state?.category) {
+      setActive(location.state.category);
+    }
+  }, [location.state]);
   return (
     <div className="min-h-screen bg-[#0e0e0d] sm:py-20 text-white">
       <style>{`
