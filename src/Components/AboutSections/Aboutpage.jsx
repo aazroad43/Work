@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "12+", label: "Years of Excellence" },
-  { value: "340+", label: "Projects Completed" },
-  { value: "28+", label: "Ongoing Projects" },
+  { value: "2+", label: "Years of Excellence" },
+  { value: "12+", label: "Projects Completed" },
+  { value: "2+", label: "Ongoing Projects" },
   { value: "6", label: "Cities We Build In" },
 ];
 
