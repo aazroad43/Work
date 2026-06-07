@@ -162,11 +162,7 @@ export default function Project() {
   if (selected) {
     return <DetailPage project={selected} onBack={() => setSelected(null)} />;
   }
-  useEffect(() => {
-    if (location.state?.category) {
-      setActive(location.state.category);
-    }
-  }, [location.state]);
+  
   return (
     <div className="min-h-screen bg-[#0e0e0d] sm:py-20 text-white">
       <style>{`
