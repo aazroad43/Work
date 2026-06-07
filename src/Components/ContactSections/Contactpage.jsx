@@ -19,21 +19,28 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "918590959856"; // Replace with your WhatsApp number
+    const whatsappNumber = "918590959856" 
 
     const message = `
- 
+╔════════════════════════════╗
+       📬 NEW ENQUIRY RECEIVED      
+╚════════════════════════════╝
 
-New Enquiry
+👤 *CLIENT DETAILS*
+──────────────────────────────
+🏷️ Name     :  ${formData.firstName} ${formData.lastName}
+📧 Email    :  ${formData.email}
+📞 Phone    :  ${formData.phone}
 
-First Name: ${formData.firstName}
-Last Name: ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-
-Message:
+──────────────────────────────
+💬 *MESSAGE*
+──────────────────────────────
 ${formData.message}
-`;
+
+──────────────────────────────
+🕐 Sent via Website Contact Form
+✨ Please respond within 24 hours
+──────────────────────────────`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message,
@@ -64,7 +71,7 @@ ${formData.message}
             Together
           </h1>
 
-          <p className="mt-6 text-lg font-['Montserrat'] text-white/80 max-w-md mx-auto">
+          <p className="mt-6 text-lg font-['Montserrat'] text-white/80 max-md mx-auto">
             Reach out to discuss your dream project
           </p>
         </div>
