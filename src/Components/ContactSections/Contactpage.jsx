@@ -22,25 +22,22 @@ const Contact = () => {
     const whatsappNumber = "918590959856" 
 
     const message = `
-╔════════════════════════════╗
+
        📬 NEW ENQUIRY RECEIVED      
-╚════════════════════════════╝
 
 👤 *CLIENT DETAILS*
-──────────────────────────────
+───────
 🏷️ Name     :  ${formData.firstName} ${formData.lastName}
 📧 Email    :  ${formData.email}
 📞 Phone    :  ${formData.phone}
 
-──────────────────────────────
+───────
 💬 *MESSAGE*
-──────────────────────────────
+───────
 ${formData.message}
 
-──────────────────────────────
-🕐 Sent via Website Contact Form
-✨ Please respond within 24 hours
-──────────────────────────────`;
+───────
+🕐 Sent via Website Contact Form`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message,
