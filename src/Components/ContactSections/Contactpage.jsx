@@ -19,24 +19,17 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "918590959856" 
+    const whatsappNumber = "919526211252" 
 
-    const message = `
+    const message = `📬 *New Enquiry*
 
-       📬 NEW ENQUIRY RECEIVED      
+👤 *Name:* ${formData.firstName} ${formData.lastName}
+📧 *Email:* ${formData.email}
+📞 *Phone:* ${formData.phone}
 
-👤 *CLIENT DETAILS*
-───────
-🏷️ Name     :  ${formData.firstName} ${formData.lastName}
-📧 Email    :  ${formData.email}
-📞 Phone    :  ${formData.phone}
-
-───────
-💬 *MESSAGE*
-───────
+💬 *Message:*
 ${formData.message}
 
-───────
 🕐 Sent via Website Contact Form`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
